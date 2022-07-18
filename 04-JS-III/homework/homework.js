@@ -250,12 +250,12 @@ function breakStatement(numero) {
   // Tu código:
   a = [];
   for (let i = 0; i < 10; i++) {
-    a.push(numero[i]);
-    numero += 2;
     if(numero == 10){
       return 'Se interrumpió la ejecución';
       break;
     }
+    numero += 2;
+    a.push(numero);
   }
   return a;
 
@@ -270,7 +270,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  a = [];
+  for (let i = 0; i < 10; i++) {
+    if(i === 5){
+      continue;
+    }
 
+    numero += 2;
+    a.push(numero);
+    
+
+  }
+  return a;
 }
 
 
